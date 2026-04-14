@@ -1,0 +1,199 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+    title="Planejamento Tributário Estratégico | Artigos ContábilPro"
+    description="Artigos detalhados sobre legislação, finanças corporativas e estratégias de crescimento para empreendedores."
+    currentPage="blog"
+    ogImage="/assets/img/image_2.jpg"
+>
+    <!-- Featured Image -->
+    <section data-aos="fade-up" class="max-w-6xl mx-auto px-6 mb-20 pt-32">
+        <div class="aspect-[21/9] rounded-xl overflow-hidden shadow-sm surface-container-low">
+            <img src="/assets/img/image_2.jpg"
+                 alt="Mesa de escritório limpa com caderno de couro, documentos financeiros e caneta sob luz natural"
+                 class="w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
+                 width="1200" height="514"
+                 loading="eager" fetchpriority="high" />
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section data-aos="fade-up" class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 pb-24">
+        <!-- Table of Contents -->
+        <aside class="hidden lg:block lg:col-span-3">
+            <div class="sticky top-32 p-8 rounded-xl bg-surface-container-low">
+                <h4 class="font-serif text-xl font-bold text-blue-800 mb-6">Neste Artigo</h4>
+                <ul class="space-y-4 text-sm font-label">
+                    <li>
+                        <a class="text-blue-700 font-medium hover:text-primary transition-colors" href="#introducao">Planejamento Tributário Estratégico</a>
+                    </li>
+                    <li>
+                        <a class="text-slate-500 hover:text-blue-600 transition-colors" href="#regimes">Escolha do Regime em 2026</a>
+                    </li>
+                    <li>
+                        <a class="text-slate-500 hover:text-blue-600 transition-colors" href="#beneficios">Benefícios e Incentivos Setoriais</a>
+                    </li>
+                    <li>
+                        <a class="text-slate-500 hover:text-blue-600 transition-colors" href="#compliance">Compliance e Tecnologia</a>
+                    </li>
+                </ul>
+                <div class="mt-8 pt-8 border-t border-outline-variant/30">
+                    <p class="text-xs text-on-surface-variant leading-relaxed italic">
+                        "A inteligência contábil é o diferencial entre o lucro estagnado e o crescimento exponencial."
+                    </p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Article Body -->
+        <article data-aos="zoom-in" class="lg:col-span-6 col-span-1 prose prose-slate prose-lg max-w-none">
+            <div class="space-y-6 text-on-surface leading-relaxed text-lg" id="introducao">
+                <div class="flex items-center gap-4 mb-8 text-sm text-muted">
+                    <span class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">calendar_today</span>
+                        10 Abr, 2026
+                    </span>
+                    <span class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span>
+                        12 min leitura
+                    </span>
+                </div>
+
+                <h2 class="text-3xl font-headline font-bold text-on-surface mt-0">O Cenário Fiscal para Pequenas e Médias Empresas</h2>
+                <p>
+                    No Brasil, a carga tributária pode representar até 35% do faturamento de uma empresa. Para as PMEs, essa pressão não é apenas um custo, mas um obstáculo real ao reinvestimento e à inovação. No entanto, a legislação brasileira oferece caminhos legítimos para a otimização dessa carga através do planejamento tributário preventivo.
+                </p>
+                <h3 class="text-2xl font-headline font-bold text-on-surface pt-6" id="regimes">1. A Transição de Regimes: Além do Simples Nacional</h3>
+                <p>
+                    Muitos empreendedores acreditam que o Simples Nacional é sempre a melhor opção. Contudo, dependendo da margem de lucro e da folha de pagamento, o <strong>Lucro Presumido</strong> ou até o <strong>Lucro Real</strong> podem gerar economias significativas em 2026.
+                </p>
+                <blockquote class="my-12 py-8 px-10 border-l-4 border-primary bg-surface-container-low rounded-r-xl italic text-on-surface-variant font-serif text-2xl leading-snug">
+                    "O planejamento tributário não é sobre sonegar impostos, mas sobre exercer o direito constitucional de organizar seu negócio da forma menos onerosa possível."
+                </blockquote>
+                <h3 class="text-2xl font-headline font-bold text-on-surface pt-6" id="beneficios">2. Incentivos Fiscais e Créditos Recuperáveis</h3>
+                <p>
+                    Existem créditos PIS/COFINS que muitas empresas deixam de aproveitar por desconhecimento técnico. A análise detalhada das notas fiscais de entrada e despesas operacionais pode revelar um "tesouro escondido" no balanço patrimonial.
+                </p>
+                <ul class="space-y-4 my-8 list-none p-0">
+                    <li class="flex gap-4 items-start bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+                        <span class="material-symbols-outlined text-tertiary text-2xl flex-shrink-0" aria-hidden="true">verified</span>
+                        <div>
+                            <strong class="block text-on-surface">Revisão de Classificação Fiscal (NCM):</strong>
+                            <span class="text-on-surface-variant">Erros de classificação levam ao pagamento duplicado de impostos monofásicos.</span>
+                        </div>
+                    </li>
+                    <li class="flex gap-4 items-start bg-surface-container-lowest p-6 rounded-xl shadow-sm">
+                        <span class="material-symbols-outlined text-tertiary text-2xl flex-shrink-0" aria-hidden="true">verified</span>
+                        <div>
+                            <strong class="block text-on-surface">Gestão de Passivos:</strong>
+                            <span class="text-on-surface-variant">Parcelamentos estratégicos podem liberar fluxo de caixa imediato para expansão.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CTA Banner -->
+            <div class="mt-16 bg-blue-900 rounded-xl p-10 md:p-14 relative overflow-hidden text-on-primary">
+                <div class="relative z-10">
+                    <h3 class="text-3xl font-headline font-bold mb-4 text-white">Ficou com alguma dúvida?</h3>
+                    <p class="text-blue-100 text-lg mb-8 max-w-md">Solicite um diagnóstico gratuito e descubra como sua empresa pode economizar em tributos ainda este semestre.</p>
+                    <a href="/contato"
+                       class="bg-white text-blue-900 px-8 py-3 rounded-xl font-bold hover:bg-blue-50 transition-colors inline-flex items-center gap-3">
+                        Falar com um Especialista
+                        <span class="material-symbols-outlined" aria-hidden="true">trending_flat</span>
+                    </a>
+                </div>
+                <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-blue-700/20 rounded-full blur-3xl"></div>
+            </div>
+        </article>
+
+        <!-- Side Widgets -->
+        <aside class="hidden lg:block lg:col-span-3 space-y-8">
+            <div class="p-6 rounded-xl bg-slate-100 shadow-sm">
+                <h4 class="font-serif text-lg font-bold text-slate-800 mb-4 flex items-center gap-2">
+                    <span class="material-symbols-outlined" aria-hidden="true">trending_up</span>
+                    Populares
+                </h4>
+                <div class="space-y-4">
+                    <a class="block group" href="/blog">
+                        <p class="text-xs text-primary font-bold uppercase tracking-wider mb-1">Finanças</p>
+                        <p class="text-sm font-medium text-slate-700 group-hover:text-primary transition-colors">5 Erros fatais no fluxo de caixa de MEIs</p>
+                    </a>
+                    <a class="block group" href="/compliance">
+                        <p class="text-xs text-primary font-bold uppercase tracking-wider mb-1">Compliance</p>
+                        <p class="text-sm font-medium text-slate-700 group-hover:text-primary transition-colors">Como se preparar para a Reforma Tributária</p>
+                    </a>
+                </div>
+            </div>
+            <div class="p-6 rounded-xl border border-outline-variant/20">
+                <h4 class="font-serif text-lg font-bold text-slate-800 mb-4">Newsletter</h4>
+                <p class="text-sm text-on-surface-variant mb-4">Receba inteligência contábil direto no seu e-mail.</p>
+                <form id="newsletter-form" class="space-y-3">
+                    <input type="email"
+                           placeholder="Seu melhor e-mail"
+                           aria-label="Seu melhor e-mail"
+                           required
+                           class="w-full bg-surface-container-lowest border-outline-variant/40 rounded-xl focus:border-primary focus:ring-2 focus:ring-primary/20 px-3 py-2" />
+                    <button type="submit"
+                            class="w-full bg-slate-900 text-white py-2 rounded-xl text-sm font-bold hover:bg-slate-800 transition-colors">
+                        Assinar Agora
+                    </button>
+                </form>
+            </div>
+        </aside>
+    </section>
+
+    <!-- Related Articles -->
+    <section data-aos="fade-up" class="max-w-7xl mx-auto px-6 mt-24 pb-24">
+        <div class="flex items-end justify-between mb-12">
+            <div>
+                <span class="text-primary font-bold tracking-widest uppercase text-sm">Continue Lendo</span>
+                <h2 class="text-4xl font-headline font-bold text-on-surface mt-2">Artigos Relacionados</h2>
+            </div>
+            <a class="text-primary font-medium hover:underline flex items-center gap-2" href="/blog">
+                Ver todo o blog
+                <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+            </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-xl overflow-hidden mb-6 bg-surface-container">
+                    <img src="/assets/img/image_3.jpg"
+                         alt="Tablet digital mostrando gráficos financeiros complexos em superfície de mármore"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         width="600" height="338" loading="lazy" decoding="async" />
+                </div>
+                <p class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Tecnologia</p>
+                <h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                    As melhores ferramentas de automação para o financeiro da sua PME
+                </h3>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-xl overflow-hidden mb-6 bg-surface-container">
+                    <img src="/assets/img/image_4.jpg"
+                         alt="Profissional confiante no escritório olhando para laptop com fundo arquitetônico moderno"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         width="600" height="338" loading="lazy" decoding="async" />
+                </div>
+                <p class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Liderança</p>
+                <h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                    Gestão transparente: O segredo para atrair investidores em 2026
+                </h3>
+            </div>
+            <div class="group cursor-pointer">
+                <div class="aspect-video rounded-xl overflow-hidden mb-6 bg-surface-container">
+                    <img src="/assets/img/image_5.jpg"
+                         alt="Aperto de mão entre profissionais em sala de diretório com iluminação suave"
+                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                         width="600" height="338" loading="lazy" decoding="async" />
+                </div>
+                <p class="text-xs font-bold text-primary uppercase tracking-widest mb-2">Consultoria</p>
+                <h3 class="text-xl font-headline font-bold text-on-surface group-hover:text-primary transition-colors leading-snug">
+                    BPO Financeiro: Por que terceirizar a contabilidade é estratégico
+                </h3>
+            </div>
+        </div>
+    </section>
+</BaseLayout>

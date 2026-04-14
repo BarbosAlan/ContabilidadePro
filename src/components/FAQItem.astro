@@ -1,0 +1,30 @@
+---
+/**
+ * FAQItem — Item de FAQ com accordion acessível
+ * Corrige: aria-expanded, estado visual, keyboard support
+ */
+
+interface Props {
+    question: string;
+    answer: string;
+    initiallyOpen?: boolean;
+}
+
+const { question, answer, initiallyOpen = false } = Astro.props;
+const isOpen = initiallyOpen;
+---
+
+<div class="faq-item border-b border-outline-variant pb-4">
+    <button class="faq-toggle w-full flex justify-between items-center text-left py-4 focus:outline-none group"
+            aria-expanded={String(isOpen)}>
+        <span class="font-bold text-lg text-on-surface group-hover:text-primary transition-colors">{question}</span>
+        <span class="material-symbols-outlined text-primary"
+              aria-hidden="true"
+              style={`font-variation-settings: 'FILL' ${isOpen ? 1 : 0}`}>
+            {isOpen ? 'remove' : 'add'}
+        </span>
+    </button>
+    <div class:list={['faq-content text-on-surface-variant leading-relaxed pb-4', { 'hidden': !isOpen }]}>
+        <p>{answer}</p>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+    title="Página não encontrada | ContábilPro"
+    description="A página que você procurou não existe em nossa arquitetura contábil."
+    currentPage="404"
+    bodyClass="h-screen flex items-center justify-center p-8"
+>
+    <div class="max-w-xl text-center">
+        <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Erro 404</span>
+        <h1 class="text-6xl md:text-8xl mb-8 font-headline italic">Perdido na Burocracia?</h1>
+        <p class="text-xl text-slate-600 mb-12 leading-relaxed">
+            Parece que o caminho que você tentou acessar não existe em nossa arquitetura. Deixe-nos guiar você de volta ao controle.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/" class="bg-primary text-white px-8 py-4 rounded-xl font-bold btn-lift inline-block">
+                Voltar ao Início
+            </a>
+            <a href="/contato" class="border border-primary text-primary px-8 py-4 rounded-xl font-bold hover:bg-primary/5 transition-all inline-block">
+                Falar com Consultor
+            </a>
+        </div>
+    </div>
+</BaseLayout>

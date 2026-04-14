@@ -1,0 +1,45 @@
+---
+/**
+ * ServiceCard — Card de serviço reutilizável
+ */
+
+interface Props {
+    icon: string;
+    title: string;
+    description: string;
+    href?: string;
+    badge?: string;
+    badgeColor?: string;
+    tags?: string;
+}
+
+const {
+    icon,
+    title,
+    description,
+    href = '#',
+    badge,
+    badgeColor = 'tertiary',
+    tags = ''
+} = Astro.props;
+---
+
+<article class:list={[
+    'bg-surface-container-lowest p-8 rounded-xl editorial-shadow group hover:translate-y-[-4px] transition-all duration-300',
+    { 'relative border-2 border-primary/10': badge }
+]} data-tags={tags}>
+    {badge && (
+        <div class={`absolute -top-3 right-8 bg-primary text-white text-[10px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg`}>
+            {badge}
+        </div>
+    )}
+    <div class="mb-6">
+        <span class="material-symbols-outlined text-4xl text-primary" aria-hidden="true">{icon}</span>
+    </div>
+    <h3 class="font-headline text-2xl font-bold mb-3 text-on-surface">{title}</h3>
+    <p class="text-on-surface-variant leading-relaxed mb-6">{description}</p>
+    <a class="inline-flex items-center gap-2 text-primary font-semibold hover:gap-4 transition-all" href={href}>
+        Saiba mais
+        <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
+    </a>
+</article>

@@ -1,0 +1,119 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+    title="Governança e Compliance | ContábilPro"
+    description="Nossa dedicação à transparência e segurança de dados. Conheça nossos termos de uso e política de privacidade conforme a LGPD."
+    currentPage="compliance"
+    ogImage="/assets/img/image_12.jpg"
+>
+    <!-- SideNavBar (Table of Contents) -->
+    <main class="pt-32 pb-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+        <aside class="hidden md:block sticky top-24 left-0 h-[calc(100vh-6rem)] w-72 rounded-r-xl bg-slate-50 transition-all duration-200 ease-in-out">
+            <div class="flex flex-col gap-2 py-8 pr-4">
+                <div class="mb-6 px-4">
+                    <h3 class="font-headline text-2xl font-light italic text-blue-700">Sumário Legal</h3>
+                    <p class="text-xs tracking-wide uppercase font-semibold text-slate-500">Documentação Oficial</p>
+                </div>
+                <a class="flex items-center gap-3 py-3 text-slate-500 hover:text-slate-800 hover:bg-slate-100 pl-4 transition-all group" href="#termos">
+                    <span class="material-symbols-outlined text-xl" aria-hidden="true">gavel</span>
+                    <span class="font-sans text-sm tracking-wide uppercase font-semibold">Termos de Uso</span>
+                </a>
+                <a class="flex items-center gap-3 py-3 text-blue-700 border-l-4 border-blue-700 pl-4 bg-slate-100 transition-all group" href="#privacidade">
+                    <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">lock</span>
+                    <span class="font-sans text-sm tracking-wide uppercase font-semibold">Privacidade</span>
+                </a>
+                <a class="flex items-center gap-3 py-3 text-slate-500 hover:text-slate-800 hover:bg-slate-100 pl-4 transition-all group" href="#compliance">
+                    <span class="material-symbols-outlined text-xl" aria-hidden="true">verified_user</span>
+                    <span class="font-sans text-sm tracking-wide uppercase font-semibold">Compliance</span>
+                </a>
+                <a class="flex items-center gap-3 py-3 text-slate-500 hover:text-slate-800 hover:bg-slate-100 pl-4 transition-all group" href="#etica">
+                    <span class="material-symbols-outlined text-xl" aria-hidden="true">balance</span>
+                    <span class="font-sans text-sm tracking-wide uppercase font-semibold">Ética</span>
+                </a>
+                <a class="flex items-center gap-3 py-3 text-slate-500 hover:text-slate-800 hover:bg-slate-100 pl-4 transition-all group" href="#dados">
+                    <span class="material-symbols-outlined text-xl" aria-hidden="true">info</span>
+                    <span class="font-sans text-sm tracking-wide uppercase font-semibold">Dados Técnicos</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Content -->
+        <article data-aos="zoom-in" class="flex-1 bg-surface-container-lowest rounded-xl p-8 md:p-16 shadow-sm border-0">
+            <div class="mb-12">
+                <span class="inline-flex items-center rounded-full bg-tertiary-container px-3 py-1 text-xs font-medium text-on-tertiary-container mb-4">
+                    Atualizado em 15 de Abril de 2026
+                </span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-light italic text-on-surface mb-6 leading-tight">Política de Privacidade e Rigor Institucional</h1>
+                <p class="text-xl text-on-surface-variant font-light leading-relaxed max-w-2xl">
+                    Na ContábilPro, a transparência não é apenas uma obrigação legal, mas o pilar fundamental de nossa arquitetura consultiva.
+                </p>
+            </div>
+
+            <section data-aos="fade-up" class="space-y-8" id="privacidade">
+                <div class="prose prose-slate max-w-none">
+                    <h2 class="text-3xl font-headline text-primary mb-6">1. Coleta e Finalidade de Dados</h2>
+                    <p class="text-on-surface-variant leading-loose mb-6">
+                        A gestão de ativos intelectuais e financeiros exige uma precisão cirúrgica na manipulação de informações sensíveis. Coletamos dados estritamente necessários para o cumprimento de obrigações acessórias, consultoria estratégica e auditoria de compliance, operando sob a égide da Lei Geral de Proteção de Dados (LGPD).
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+                        <div class="p-6 bg-surface-container-low rounded-xl">
+                            <h4 class="font-bold text-on-surface mb-2">Dados de Identificação</h4>
+                            <p class="text-sm text-on-surface-variant">Processamento de CNPJ, CRC e informações societárias para fins de representação legal e fiscal.</p>
+                        </div>
+                        <div class="p-6 bg-surface-container-low rounded-xl">
+                            <h4 class="font-bold text-on-surface mb-2">Dados Transacionais</h4>
+                            <p class="text-sm text-on-surface-variant">Registros de fluxo de caixa e balancetes para estruturação de relatórios contábeis.</p>
+                        </div>
+                    </div>
+                    <h2 class="text-3xl font-headline text-primary mb-6">2. Protocolos de Segurança</h2>
+                    <p class="text-on-surface-variant leading-loose mb-6">
+                        Nossa infraestrutura utiliza criptografia de nível empresarial (AES-256) e auditorias de acesso. Os dados são protegidos em múltiplos servidores para garantir que a segurança da informação permaneça inatingível por agentes externos.
+                    </p>
+                    <blockquote class="border-l-4 border-tertiary pl-6 my-10 italic text-xl font-headline text-slate-700">
+                        "O segredo do negócio é a base da nossa consultoria. Sem privacidade total, não há estratégia real."
+                    </blockquote>
+                    <h2 class="text-3xl font-headline text-primary mb-6" id="termos">3. Direitos do Titular</h2>
+                    <p class="text-on-surface-variant leading-loose mb-12">
+                        Todo cliente possui o direito de portabilidade, retificação e exclusão definitiva de seus registros, desde que não conflitem com os prazos de guarda documental exigidos pelo Conselho Federal de Contabilidade e Receita Federal do Brasil.
+                    </p>
+                </div>
+
+                <!-- Download -->
+                <div class="mt-20 p-10 bg-primary-container text-on-primary-container rounded-xl flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div>
+                        <h3 class="text-2xl font-headline italic mb-2">Documentação Completa</h3>
+                        <p class="text-on-primary-container/80 text-sm">Faça o download do PDF oficial com todas as cláusulas de Compliance e LGPD.</p>
+                    </div>
+                    <button class="bg-surface-container-lowest text-primary flex items-center gap-2 px-8 py-4 rounded-xl font-bold shadow-lg hover:bg-slate-50 transition-all">
+                        <span class="material-symbols-outlined" aria-hidden="true">download</span>
+                        Baixar PDF Oficial
+                    </button>
+                </div>
+            </section>
+        </article>
+
+        <!-- Contextual Sidebar -->
+        <aside class="w-full md:w-80 space-y-8">
+            <div class="bg-surface-container-high rounded-xl p-6">
+                <h4 class="font-headline text-xl mb-4">Suporte Legal</h4>
+                <p class="text-sm text-on-surface-variant mb-6">Dúvidas sobre o tratamento de seus dados financeiros?</p>
+                <a class="text-primary font-bold text-sm flex items-center gap-1 group" href="/contato">
+                    Falar com o DPO
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" aria-hidden="true">arrow_forward</span>
+                </a>
+            </div>
+            <div class="relative rounded-xl overflow-hidden h-48 bg-slate-900">
+                <img src="/assets/img/image_12.jpg"
+                     alt="Hall de escritório moderno com mármore e reflexos corporativos"
+                     class="w-full h-full object-cover opacity-60"
+                     width="400" height="192" loading="lazy" decoding="async" />
+                <div class="absolute inset-0 p-6 flex flex-col justify-end bg-gradient-to-t from-slate-950 to-transparent">
+                    <p class="text-white text-xs font-bold uppercase tracking-widest">Padrão ContábilPro</p>
+                    <p class="text-white/80 text-sm">Excelência Contábil para PMEs de Alto Crescimento.</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+</BaseLayout>

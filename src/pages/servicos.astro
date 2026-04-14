@@ -1,0 +1,218 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import FAQItem from '../components/FAQItem.astro';
+
+const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Como trocar de contador para a ContábilPro?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O processo é 100% digital e gratuito. Nós entramos em contato com seu antigo contador para solicitar a documentação e fazemos a transição de forma transparente."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quais documentos são necessários para começar?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Inicialmente, precisamos apenas do Contrato Social, Cartão CNPJ e o último balancete. Nossa equipe auxilia na coleta de qualquer item adicional."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Vocês atendem empresas de outros estados?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. Utilizamos uma infraestrutura 100% digital e segura que nos permite atender empresas de qualquer estado brasileiro com a mesma precisão."
+            }
+        }
+    ]
+};
+---
+
+<BaseLayout
+    title="Soluções Contábeis e Fiscais | Serviços ContábilPro"
+    description="Do BPO financeiro ao planejamento tributário complexo. Descubra como nossas soluções arquitetadas impulsionam seu negócio."
+    currentPage="servicos"
+    ogImage="/assets/img/image_20.jpg"
+    {jsonLd}
+>
+    <!-- Breadcrumbs -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-6">
+        <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-sm text-on-surface-variant font-label">
+            <ol class="flex items-center gap-2 list-none p-0 m-0">
+                <li>
+                    <a href="/" class="hover:text-primary transition-colors">
+                        <span aria-hidden="true">🏠</span> Home
+                    </a>
+                </li>
+                <li class="material-symbols-outlined text-xs" aria-hidden="true">chevron_right</li>
+                <li aria-current="page" class="text-primary font-semibold">Serviços</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
+    <section data-aos="fade-up" class="max-w-screen-2xl mx-auto px-8 py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7">
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-on-surface leading-tight mb-6">
+                Nossas Soluções <br/><span class="text-primary text-3xl md:text-5xl lg:text-7xl">Contábeis</span>
+            </h1>
+            <p class="text-lg md:text-xl text-on-surface-variant max-w-xl leading-relaxed mb-8">
+                Arquitetamos o futuro financeiro da sua empresa com inteligência tributária, reduzindo custos e eliminando burocracias de forma estratégica.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <span class="bg-primary-container text-on-primary-container px-4 py-1.5 rounded-full text-sm font-medium">Foco em PME e MEI</span>
+                <span class="bg-tertiary-container text-on-tertiary-container px-4 py-1.5 rounded-full text-sm font-medium">Compliance Total</span>
+            </div>
+        </div>
+        <div class="md:col-span-5 relative">
+            <div class="aspect-square rounded-full overflow-hidden editorial-shadow">
+                <img src="/assets/img/image_20.jpg"
+                     alt="Mesa de escritório profissional com gráficos financeiros e estética minimalista"
+                     class="w-full h-full object-cover"
+                     width="600" height="600"
+                     loading="eager" fetchpriority="high" />
+            </div>
+            <div class="absolute -bottom-6 -left-6 bg-surface-container-lowest p-6 rounded-xl editorial-shadow max-w-[200px]">
+                <p class="font-headline text-3xl font-bold text-primary mb-1">98%</p>
+                <p class="text-xs text-on-surface-variant font-medium leading-tight">De satisfação entre nossos clientes consultivos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters -->
+    <section data-aos="fade-up" class="max-w-screen-2xl mx-auto px-8 py-8 border-t border-outline-variant/10 overflow-x-auto invisible-scrollbar" id="servicos-filtros">
+        <div class="flex flex-nowrap md:flex-wrap items-center gap-3 min-w-max md:min-w-0">
+            <span class="text-sm font-bold uppercase tracking-wider text-on-surface-variant mr-4">Filtrar por:</span>
+            <button class="px-6 py-2 rounded-full bg-primary text-white text-sm font-semibold shadow-md">Todos</button>
+            <button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors text-sm font-medium">MEI</button>
+            <button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors text-sm font-medium">Simples Nacional</button>
+            <button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors text-sm font-medium">Lucro Real</button>
+            <button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container-high transition-colors text-sm font-medium">Departamento Pessoal</button>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section data-aos="fade-up" class="max-w-screen-2xl mx-auto px-8 py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <ServiceCard
+                icon="rocket_launch"
+                title="Abertura de Empresa"
+                description="Inicie sua jornada empreendedora com a estrutura societária correta para pagar o mínimo de impostos desde o dia zero."
+                href="#abertura"
+                badge="Destaque"
+                tags="mei simples nacional"
+            />
+            <ServiceCard
+                icon="account_balance"
+                title="Gestão Contábil Mensal"
+                description="Escrituração digital completa com relatórios gerenciais que ajudam você a entender a saúde real do seu negócio."
+                href="#gestao"
+                badge="Mais Procurado"
+                tags="simples nacional lucro presumido"
+            />
+            <ServiceCard
+                icon="query_stats"
+                title="Planejamento Tributário"
+                description="Análise profunda da sua operação para identificar elisão fiscal legítima e recuperação de créditos retroativos."
+                href="#planejamento"
+                tags="lucro real simples nacional"
+            />
+            <ServiceCard
+                icon="account_tree"
+                title="BPO Financeiro"
+                description="Terceirize seu financeiro. Nós cuidamos do seu contas a pagar, receber e conciliação bancária enquanto você foca no core business."
+                href="#bpo"
+                tags="simples nacional lucro real"
+            />
+            <ServiceCard
+                icon="groups"
+                title="Assessoria Trabalhista"
+                description="Gestão completa de folha de pagamento, eSocial e consultoria preventiva para evitar passivos trabalhistas."
+                href="#trabalhista"
+                tags="departamento pessoal"
+            />
+            <ServiceCard
+                icon="currency_exchange"
+                title="Recuperação de Créditos"
+                description="Identificação de impostos pagos indevidamente nos últimos 5 anos com recuperação administrativa rápida."
+                href="#creditos"
+                tags="lucro real"
+            />
+        </div>
+    </section>
+
+    <!-- Como Funciona -->
+    <section data-aos="fade-up" class="bg-surface-container-low py-24">
+        <div class="max-w-screen-2xl mx-auto px-8 text-center mb-16">
+            <h2 class="font-headline text-4xl font-bold mb-4">Experiência Sem Atrito</h2>
+            <p class="text-on-surface-variant max-w-2xl mx-auto">Nossa metodologia foi desenhada para que você nunca precise se preocupar com prazos ou guias.</p>
+        </div>
+        <div class="max-w-5xl mx-auto px-8 relative">
+            <div class="absolute top-1/2 left-0 w-full h-0.5 bg-outline-variant/30 hidden md:block -translate-y-1/2 z-0"></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-headline text-2xl font-bold mb-6 editorial-shadow">1</div>
+                    <h4 class="font-bold text-xl mb-2">Diagnóstico Gratuito</h4>
+                    <p class="text-sm text-on-surface-variant text-center">Analisamos sua situação atual e identificamos gargalos e oportunidades de economia.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-headline text-2xl font-bold mb-6 editorial-shadow">2</div>
+                    <h4 class="font-bold text-xl mb-2">Proposta Personalizada</h4>
+                    <p class="text-sm text-on-surface-variant text-center">Criamos um plano sob medida para sua escala, seja você MEI ou uma média empresa.</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-16 h-16 bg-primary text-white rounded-full flex items-center justify-center font-headline text-2xl font-bold mb-6 editorial-shadow">3</div>
+                    <h4 class="font-bold text-xl mb-2">Início da Operação</h4>
+                    <p class="text-sm text-on-surface-variant text-center">Migração assistida sem interrupção dos seus serviços ou perda de prazos fiscais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section data-aos="fade-up" class="max-w-3xl mx-auto px-8 py-24">
+        <h2 class="font-headline text-4xl font-bold mb-12 text-center">Dúvidas Frequentes</h2>
+        <div class="space-y-4">
+            <FAQItem
+                question="Como trocar de contador para a ContábilPro?"
+                answer="O processo é 100% digital e gratuito. Nós entramos em contato com seu antigo contador para solicitar a documentação e fazemos a transição de forma transparente."
+                initiallyOpen={false}
+            />
+            <FAQItem
+                question="Quais documentos são necessários para começar?"
+                answer="Inicialmente, precisamos apenas do Contrato Social, Cartão CNPJ e o último balancete. Nossa equipe auxilia na coleta de qualquer item adicional."
+                initiallyOpen={false}
+            />
+            <FAQItem
+                question="Vocês atendem empresas de outros estados?"
+                answer="Sim. Utilizamos uma infraestrutura 100% digital e segura que nos permite atender empresas de qualquer estado brasileiro com a mesma precisão."
+                initiallyOpen={false}
+            />
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section data-aos="fade-up" class="max-w-screen-2xl mx-auto px-8 pb-24">
+        <div class="bg-primary-container rounded-2xl p-12 md:p-20 text-center relative overflow-hidden editorial-shadow">
+            <div class="relative z-10">
+                <h2 class="font-headline text-4xl md:text-5xl font-bold text-white mb-6">Pronto para elevar o nível da sua gestão?</h2>
+                <p class="text-on-primary-container text-lg mb-10 max-w-2xl mx-auto opacity-90">
+                    Nossos consultores estão prontos para realizar um diagnóstico 360º da sua empresa sem custo inicial.
+                </p>
+                <a href="/contato"
+                   class="bg-surface-container-lowest text-primary font-bold px-10 py-4 rounded-xl text-lg hover:scale-105 active:scale-95 transition-all shadow-xl inline-block">
+                    Solicitar um Diagnóstico Gratuito agora
+                </a>
+            </div>
+            <div class="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full -mr-48 -mt-48"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full -ml-32 -mb-32"></div>
+        </div>
+    </section>
+</BaseLayout>

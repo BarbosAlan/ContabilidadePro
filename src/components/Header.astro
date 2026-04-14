@@ -1,0 +1,107 @@
+---
+/**
+ * Header — Componente de navegação reutilizável
+ * Corrige: aria-labels, active link, aria-expanded
+ */
+
+interface Props {
+    currentPage?: string;
+}
+
+const { currentPage = 'index' } = Astro.props;
+
+const navItems = [
+    { href: '/', label: 'Início', id: 'index' },
+    { href: '/servicos', label: 'Serviços', id: 'servicos' },
+    { href: '/sobre', label: 'Sobre', id: 'sobre' },
+    { href: '/blog', label: 'Blog', id: 'blog' },
+    { href: '/compliance', label: 'Compliance', id: 'compliance' },
+];
+---
+
+<header class="fixed top-0 w-full z-50 glass-nav shadow-sm h-16 md:h-20">
+    <div class="flex justify-between items-center px-8 h-full max-w-7xl mx-auto">
+        <div class="flex items-center gap-8">
+            <a href="/" aria-label="Página inicial da ContábilPro" class="flex-shrink-0">
+                <img src="/assets/img/Logo-Contabil.png" alt="Logotipo ContábilPro" class="w-40 md:w-56 lg:w-64 h-auto object-contain" />
+            </a>
+            <nav class="hidden md:flex gap-6" aria-label="Navegação principal">
+                {navItems.map(item => (
+                    <a
+                        class:list={[
+                            'text-slate-600 hover:text-primary transition-colors font-medium text-sm',
+                            { 'text-primary font-bold': item.id === currentPage }
+                        ]}
+                        href={item.href}
+                        aria-current={item.id === currentPage ? 'page' : undefined}
+                    >
+                        {item.label}
+                    </a>
+                ))}
+            </nav>
+        </div>
+        <div class="flex items-center gap-4">
+            <a href="/contato"
+               class="hidden md:block bg-primary hover:bg-primary-container text-white px-5 py-2.5 rounded-md text-sm font-semibold transition-all transform hover:scale-[1.02] active:scale-95">
+                Consultoria Gratuita
+            </a>
+            <button id="mobile-menu-btn"
+                    class="md:hidden text-slate-800 focus:outline-none"
+                    aria-label="Abrir menu de navegação"
+                    aria-expanded="false"
+                    aria-controls="mobile-menu-overlay">
+                <span class="material-symbols-outlined text-3xl" aria-hidden="true">menu</span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu-overlay"
+     class="fixed inset-0 bg-slate-900/60 backdrop-blur-md z-[60] opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="mobile-menu-drawer"
+         class="fixed top-0 right-0 h-full w-[80%] max-w-sm bg-white shadow-2xl z-[70] translate-x-full transition-transform duration-300 ease-in-out p-8 flex flex-col"
+         role="dialog"
+         aria-label="Menu de navegação"
+         aria-modal="true">
+        <div class="flex justify-between items-center mb-12">
+            <span class="text-xl font-bold text-slate-900">Navegação</span>
+            <button id="mobile-menu-close" class="text-slate-500" aria-label="Fechar menu">
+                <span class="material-symbols-outlined text-3xl" aria-hidden="true">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col gap-6 text-lg">
+            {navItems.map(item => (
+                <a class:list={[
+                    'text-slate-600 hover:text-primary transition-colors font-medium border-b border-slate-100 pb-2',
+                    { 'text-primary font-bold': item.id === currentPage }
+                ]} href={item.href}>
+                    {item.label}
+                </a>
+            ))}
+            <a class="mt-4 bg-primary text-white text-center px-6 py-4 rounded-xl font-bold shadow-lg shadow-primary/20"
+               href="/contato">
+                Consultoria Gratuita
+            </a>
+        </nav>
+        <div class="mt-auto pt-12">
+            <p class="text-[10px] uppercase tracking-widest text-muted mb-4">Redes Sociais</p>
+            <div class="flex gap-4">
+                <a href="https://instagram.com/contabilpro"
+                   aria-label="Siga-nos no Instagram"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-primary hover:bg-slate-100 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="https://linkedin.com/company/contabilpro"
+                   aria-label="Siga-nos no LinkedIn"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-primary hover:bg-slate-100 transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

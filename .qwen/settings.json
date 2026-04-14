@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git clone *)",
+      "Bash(\"c:\\program files\\git\\cmd\\git.exe\" *)",
+      "Bash(set *)",
+      "Bash(xcopy *)",
+      "Bash(rmdir *)",
+      "Bash(npm install)",
+      "Bash(where *)"
+    ]
+  },
+  "$version": 3
+}

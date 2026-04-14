@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+    title="Fale com nossos Especialistas | Contato ContábilPro"
+    description="Pronto para o próximo nível? Entre em contato agora e solicite seu diagnóstico contábil gratuito e personalizado."
+    currentPage="contato"
+    ogImage="/assets/img/image_13.jpg"
+>
+    <main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <!-- Hero Section -->
+        <section data-aos="fade-up" class="mb-20 text-center md:text-left">
+            <div class="grid md:grid-cols-3 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <span class="text-primary font-semibold tracking-widest text-xs uppercase mb-4 block">Consultoria Estratégica</span>
+                    <h1 class="text-4xl md:text-5xl lg:text-7xl text-on-background leading-tight mb-6">Diagnóstico Financeiro <br/><span class="italic font-light">de Alta Performance.</span></h1>
+                    <p class="text-lg text-on-surface-variant max-w-xl leading-relaxed">Arquitetamos soluções contábeis sob medida para PMEs que buscam clareza institucional e eficiência tributária.</p>
+                </div>
+                <div class="hidden md:block relative">
+                    <div class="aspect-square bg-surface-container-high rounded-full overflow-hidden shadow-sm">
+                        <img src="/assets/img/image_13.jpg"
+                             alt="Análise de dados financeiros em ambiente profissional minimalista"
+                             class="w-full h-full object-cover grayscale opacity-80"
+                             width="400" height="400"
+                             loading="eager" fetchpriority="high" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Grid -->
+        <div class="grid lg:grid-cols-12 gap-16">
+            <!-- Contact Form -->
+            <div class="lg:col-span-8 bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm">
+                <div class="mb-10">
+                    <h2 class="text-3xl text-on-background mb-4">Vamos resolver seu caixa?</h2>
+                    <p class="text-on-surface-variant">Insira seus dados rápidos e te ligamos com um plano em 24h.</p>
+                </div>
+                <!-- ⚠️ Substitua FORMSPREE_ID pelo seu ID do Formspree -->
+                <form id="contact-form" class="grid md:grid-cols-2 gap-x-8 gap-y-6"
+                      action="https://formspree.io/f/FORMSPREE_ID"
+                      method="POST">
+                    <!-- Segurança Anti-spam (Honeypot) -->
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-on-surface-variant" for="nome">Nome Completo</label>
+                        <input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors py-3 px-1 rounded-sm"
+                               id="nome" name="nome" placeholder="Ex: Arthur ContábilPro" type="text" required />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-on-surface-variant" for="email">E-mail Corporativo</label>
+                        <input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors py-3 px-1 rounded-sm"
+                               id="email" name="email" placeholder="arthur@empresa.com" type="email" required />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-on-surface-variant" for="tel">Telefone/WhatsApp</label>
+                        <input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors py-3 px-1 rounded-sm"
+                               id="tel" name="telefone" placeholder="(11) 99999-9999" type="tel" />
+                    </div>
+                    <div class="space-y-2">
+                        <label class="text-sm font-medium text-on-surface-variant" for="tipo">Tipo de Empresa</label>
+                        <select class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors py-3 px-1 rounded-sm"
+                                id="tipo" name="tipo_empresa">
+                            <option>MEI</option>
+                            <option>PME (Simples Nacional)</option>
+                            <option>Lucro Presumido</option>
+                            <option>Lucro Real</option>
+                        </select>
+                    </div>
+                    <div class="space-y-2 md:col-span-2">
+                        <label class="text-sm font-medium text-on-surface-variant" for="faturamento">Faturamento Mensal Estimado</label>
+                        <input class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors py-3 px-1 rounded-sm"
+                               id="faturamento" name="faturamento" placeholder="R$ 0,00" type="text" />
+                    </div>
+                    <div class="space-y-2 md:col-span-2">
+                        <label class="text-sm font-medium text-on-surface-variant" for="mensagem">Mensagem (Opcional)</label>
+                        <textarea class="w-full bg-surface-container-low border-0 border-b border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors py-3 px-1 rounded-sm"
+                                  id="mensagem" name="mensagem" placeholder="Conte brevemente sobre seus desafios contábeis" rows="3"></textarea>
+                    </div>
+                    <div class="md:col-span-2 flex items-start gap-3 mt-4">
+                        <input class="mt-1 rounded-sm border-outline text-primary focus:ring-primary"
+                               id="lgpd" name="lgpd_consent" type="checkbox" required />
+                        <label class="text-xs text-on-surface-variant leading-relaxed" for="lgpd">
+                            Estou de acordo com a Política de Privacidade e autorizo o tratamento dos meus dados para fins de contato e diagnóstico conforme a LGPD.
+                        </label>
+                    </div>
+                    <div class="md:col-span-2 mt-6">
+                        <button class="w-full md:w-auto bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-4 rounded-lg font-bold text-lg hover:shadow-lg transition-all active:scale-95 duration-200" type="submit">
+                            Enviar Solicitação
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Sidebar Info -->
+            <div class="lg:col-span-4 space-y-12">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl mb-6">Nossa Sede</h3>
+                        <div class="aspect-video bg-surface-container rounded-xl overflow-hidden mb-6 relative group">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=640&q=80"
+                                 alt="Consultora experiente e amigável pronta para atender"
+                                 class="w-full h-full object-cover filter grayscale transition-all duration-500 group-hover:grayscale-0"
+                                 width="640" height="360" loading="lazy" decoding="async" />
+                            <div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary" aria-hidden="true">location_on</span>
+                                <p class="text-on-surface-variant">Visconde de Piraja Ipanema, 4500<br/>Rio de Janeiro - RJ</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary" aria-hidden="true">mail</span>
+                                <a href="mailto:contato@contabilpro.com.br" class="text-on-surface-variant hover:text-primary transition-colors">contato@contabilpro.com.br</a>
+                            </div>
+                            <div class="flex gap-4">
+                                <span class="material-symbols-outlined text-primary" aria-hidden="true">call</span>
+                                <a href="tel:+552133445566" class="text-on-surface-variant hover:text-primary transition-colors">+55 (21) 3344-5566</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ -->
+                <div class="space-y-6 pt-12 border-t border-outline-variant/30">
+                    <h3 class="text-2xl mb-4">Dúvidas Frequentes</h3>
+                    <div class="space-y-4">
+                        <details class="group bg-surface-container-low p-4 rounded-xl cursor-pointer">
+                            <summary class="list-none flex justify-between items-center font-medium text-on-surface">
+                                O diagnóstico tem algum custo?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Não. O diagnóstico inicial é uma cortesia estratégica para entendermos se nossa consultoria se alinha aos seus objetivos de crescimento.</p>
+                        </details>
+                        <details class="group bg-surface-container-low p-4 rounded-xl cursor-pointer">
+                            <summary class="list-none flex justify-between items-center font-medium text-on-surface">
+                                Quanto tempo leva a análise?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Após o envio dos dados preliminares, nossa equipe de especialistas realiza o estudo e entra em contato em no máximo 24 horas úteis.</p>
+                        </details>
+                        <details class="group bg-surface-container-low p-4 rounded-xl cursor-pointer">
+                            <summary class="list-none flex justify-between items-center font-medium text-on-surface">
+                                Atendem em todo o Brasil?
+                                <span class="material-symbols-outlined group-open:rotate-180 transition-transform" aria-hidden="true">expand_more</span>
+                            </summary>
+                            <p class="text-sm text-on-surface-variant mt-3 leading-relaxed">Sim. Utilizamos uma infraestrutura 100% digital e segura que nos permite atender empresas de qualquer estado brasileiro com a mesma precisão.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</BaseLayout>
